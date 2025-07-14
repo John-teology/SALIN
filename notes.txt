@@ -4,3 +4,7 @@
 
 `Route::resource('users', \App\Http\Controllers\UserController::class);`
  this will automatically create routes for all the restful api routes.
+
+
+
+resource is parang serialize lang

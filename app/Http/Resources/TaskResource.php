@@ -5,6 +5,7 @@ namespace App\Http\Resources;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\UserResource;
 
 class TaskResource extends JsonResource
 {
@@ -26,8 +27,8 @@ class TaskResource extends JsonResource
                 'project_id' => $this->project_id,
                 'image_path' => $this->image_path,
                 'assigned_user' => $this->assignedUser,
-                'created_by' => $this->createdBy,
-                'updated_by' => $this->updatedBy,
+                'created_by' => new UserResource($this->createdBy),
+                'updated_by' => new UserResource($this->updatedBy),
 
             ];
     }
