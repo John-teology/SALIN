@@ -26,7 +26,7 @@ class TaskResource extends JsonResource
                 'priority' => $this->priority,
                 'project_id' => $this->project_id,
                 'image_path' => $this->image_path,
-                'assigned_user' => $this->assignedUser,
+                'assigned_user' => new UserResource($this->assignedUser),
                 'created_by' => new UserResource($this->createdBy),
                 'updated_by' => new UserResource($this->updatedBy),
 
